@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Heart Rate Details">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    <StackLayout padding="20">
+        <Label text="Current Heart Rate:" class="card-title" />
+        
+        <Label text="{{ currentHR }}" class="card-value" fontSize="60" />
+        <Label text="bpm" class="card-unit" />
+
+        <Label text="[Heart Rate Graph will be here]" class="section-title" marginTop="30" />
+    </StackLayout>
+</Page>

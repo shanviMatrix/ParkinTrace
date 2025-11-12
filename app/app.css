@@ -1,0 +1,116 @@
+﻿ActionBar {
+  background-color: #0c59a4;
+  color: white;
+}
+.section-title {
+  font-size: 20;
+  font-weight: bold;
+  margin-top: 20;
+  margin-bottom: 10;
+}
+.card {
+  background-color: white;
+  border-radius: 8;
+  padding: 15;
+  margin: 8;
+  box-shadow: 0 2 5 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.card-title {
+  font-size: 14;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10;
+}
+.card-value {
+  font-size: 28;
+  font-weight: bold;
+  color: #0c59a4;
+}
+.card-unit {
+  font-size: 12;
+  color: #777;
+}
+.profile-card {
+  background-color: #f0f4f7;
+  padding: 20;
+}
+.profile-name {
+  font-size: 24;
+  font-weight: bold;
+}
+.doctor-button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 20;
+  font-weight: bold;
+  height: 60;
+  margin: 10 10 10 10;
+  border-radius: 30;
+}
+.sos-button {
+  background-color: #d32f2f;
+  color: white;
+  font-size: 22;
+  font-weight: bold;
+  height: 70;
+  margin: 0 10 10 10;
+  border-radius: 35;
+}
+.card-tremor-alert {
+  background-color: #fff3e0;
+  border-width: 2;
+  border-color: #ff9800;
+}
+.card-fall-alert {
+  background-color: #ffebee;
+  border-width: 2;
+  border-color: #d32f2f;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.drawer-content {
+  background-color: #f8f8f8;
+  padding: 20;
+}
+.drawer-profile {
+  background-color: #0c59a4;
+  color: white;
+  padding: 20;
+  margin: -20 -20 20 -20; /* Top/Left/Right/Bottom */
+}
+.drawer-profile-name {
+  font-size: 22;
+  font-weight: bold;
+  color: white;
+}
+.drawer-profile-id {
+  font-size: 14;
+  color: #eeeeee;
+}
+.drawer-link {
+  font-size: 18;
+  padding: 15 10;
+  color: #333333;
+}
+.drawer-logout {
+  margin-top: 30;
+  color: #d32f2f;
+  font-weight: bold;
+}
+.drawer-link:hover {
+  background-color: #e0e0e0;
+}

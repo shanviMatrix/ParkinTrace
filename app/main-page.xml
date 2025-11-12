@@ -1,0 +1,67 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:sd="nativescript-ui-sidedrawer"
+    navigatingTo="onNavigatingTo" 
+    navigatingFrom="onNavigatingFrom">
+
+    <ActionBar title="ParkinTrace">
+        <NavigationButton text="☰" tap="toggleDrawer" />
+    </ActionBar>
+
+    <sd:RadSideDrawer id="drawer">
+
+        <sd:RadSideDrawer.drawerContent>
+            <StackLayout class="drawer-content">
+                <StackLayout class="drawer-profile">
+                    <Label text="Shanvi" class="drawer-profile-name" />
+                    <Label text="Patient ID: 12300556" class="drawer-profile-id" />
+                </StackLayout>
+                
+                <StackLayout>
+                    <Label text="Learn about Parkinson's" class="drawer-link" tap="onLearnTap" />
+                    <Label text="Update Doctor Info" class="drawer-link" tap="onUpdateDoctorTap" />
+                    <Label text="Logout" class="drawer-link drawer-logout" tap="onLogoutTap" />
+                </StackLayout>
+            </StackLayout>
+        </sd:RadSideDrawer.drawerContent>
+
+        <sd:RadSideDrawer.mainContent>
+            
+            <GridLayout rows="*, auto">
+                
+                <ScrollView row="0">
+                    <StackLayout padding="15">
+                        <Label text="Live Vitals" class="section-title" />
+                        <GridLayout columns="*, *" rows="auto, auto">
+                            <StackLayout col="0" row="0" class="card" tap="onCardTap">
+                                <Label text="Heart Rate" class="card-title" />
+                                <Label text="{{ heartRate }}" class="card-value" /> 
+                                <Label text="bpm" class="card-unit" />
+                            </StackLayout>
+                            <StackLayout col="1" row="0" class="card" tap="onOxygenCardTap">
+                                <Label text="Blood Oxygen" class="card-title" />
+                                <Label text="{{ oxygen }}" class="card-value" /> 
+                                <Label text="SpO2 %" class="card-unit" />
+                            </StackLayout>
+                            <StackLayout col="0" row="1" class="{{ tremorStatusClass }}" tap="onCardTap">
+                                <Label text="Tremor Status" class="card-title" />
+                                <Label text="{{ tremor }}" class="card-value" /> 
+                            </StackLayout>
+                            <StackLayout col="1" row="1" class="{{ fallStatusClass }}" tap="onCardTap">
+                                <Label text="Fall Detection" class="card-title" />
+                                <Label text="{{ fall }}" class="card-value" /> 
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+
+                <!-- Row 1: "Button Area" (Same as before) -->
+                <StackLayout row="1" orientation="vertical">
+                    <Button text="Connect to Doctor" class="doctor-button" tap="onDoctorTap" />
+                    <Button text="SOS" class="sos-button" tap="onSOSTap" />
+                </StackLayout>
+            </GridLayout>
+
+        </sd:RadSideDrawer.mainContent>
+    </sd:RadSideDrawer>
+</Page>
