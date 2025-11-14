@@ -1,0 +1,127 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Send Feedback">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="feedback-container">
+            
+            <StackLayout class="feedback-header">
+                <Label text="💬" fontSize="60" horizontalAlignment="center" />
+                <Label text="We Value Your Feedback" class="feedback-title" />
+                <Label text="Help us improve ParkinTrace" class="feedback-subtitle" />
+            </StackLayout>
+
+            <!-- Rating Section -->
+            <StackLayout class="feedback-section">
+                <Label text="How would you rate your experience?" class="question-text" />
+                <GridLayout columns="*, *, *, *, *" class="rating-container">
+                    <Label col="0" text="⭐" class="star-icon" tap="{{ onStarTap }}" id="star1" />
+                    <Label col="1" text="⭐" class="star-icon" tap="{{ onStarTap }}" id="star2" />
+                    <Label col="2" text="⭐" class="star-icon" tap="{{ onStarTap }}" id="star3" />
+                    <Label col="3" text="⭐" class="star-icon" tap="{{ onStarTap }}" id="star4" />
+                    <Label col="4" text="⭐" class="star-icon" tap="{{ onStarTap }}" id="star5" />
+                </GridLayout>
+                <Label text="{{ ratingText }}" class="rating-text" />
+            </StackLayout>
+
+            <!-- Multiple Choice Questions -->
+            <StackLayout class="feedback-section">
+                <Label text="What do you like most?" class="question-text" />
+                
+                <StackLayout class="option-item" tap="onOption1Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ option1Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Easy to use interface" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="option-item" tap="onOption2Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ option2Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Accurate health monitoring" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="option-item" tap="onOption3Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ option3Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Emergency SOS feature" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="option-item" tap="onOption4Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ option4Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Doctor connectivity" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- What can we improve -->
+            <StackLayout class="feedback-section">
+                <Label text="What can we improve?" class="question-text" />
+                
+                <StackLayout class="improve-option" tap="onImprove1Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ improve1Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Add more health metrics" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="improve-option" tap="onImprove2Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ improve2Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Better chart visualizations" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="improve-option" tap="onImprove3Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ improve3Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Medication reminders" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="improve-option" tap="onImprove4Tap">
+                    <GridLayout columns="auto, *">
+                        <Label col="0" text="{{ improve4Selected }}" class="checkbox-icon" />
+                        <Label col="1" text="Voice commands" class="option-text" />
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Text Feedback -->
+            <StackLayout class="feedback-section">
+                <Label text="Additional Comments (Optional)" class="question-text" />
+                <TextView 
+                    hint="Share your thoughts, suggestions, or report issues..." 
+                    text="{{ comments }}" 
+                    class="feedback-textarea" 
+                    height="120" />
+            </StackLayout>
+
+            <!-- Contact Info -->
+            <StackLayout class="feedback-section">
+                <Label text="Would you like us to contact you?" class="question-text" />
+                <TextField 
+                    hint="Your email (optional)" 
+                    keyboardType="email" 
+                    text="{{ contactEmail }}" 
+                    class="input" />
+            </StackLayout>
+
+            <!-- Submit Button -->
+            <Button 
+                text="✉️ Submit Feedback" 
+                tap="onSubmitFeedback" 
+                class="submit-feedback-btn" />
+
+            <Label 
+                text="Thank you for helping us improve!" 
+                class="thank-you-text" 
+                textWrap="true" />
+
+        </StackLayout>
+    </ScrollView>
+</Page>

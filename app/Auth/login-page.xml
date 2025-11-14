@@ -1,0 +1,59 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="ParkinTrace" />
+    
+    <ScrollView>
+        <StackLayout class="login-container">
+            
+            <StackLayout class="login-header">
+                <Label text="🏥" fontSize="60" horizontalAlignment="center" />
+                <Label text="ParkinTrace" class="app-title" />
+                <Label text="Monitor. Alert. Care." class="app-subtitle" />
+            </StackLayout>
+
+            <StackLayout class="login-form">
+                <Label text="Welcome Back" class="form-title" />
+                
+                <StackLayout class="input-field">
+                    <Label text="Email" class="input-label" />
+                    <TextField 
+                        hint="Enter your email" 
+                        keyboardType="email" 
+                        text="{{ email }}" 
+                        class="input" 
+                        autocorrect="false" 
+                        autocapitalizationType="none" />
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label text="Password" class="input-label" />
+                    <TextField 
+                        hint="Enter your password" 
+                        secure="true" 
+                        text="{{ password }}" 
+                        class="input" />
+                </StackLayout>
+
+                <Button 
+                    text="Login" 
+                    tap="onLoginTap" 
+                    class="btn-primary" />
+
+                <Label 
+                    text="Forgot Password?" 
+                    tap="onForgotPasswordTap" 
+                    class="link-text" 
+                    horizontalAlignment="center" 
+                    marginTop="15" />
+            </StackLayout>
+
+            <StackLayout class="signup-section">
+                <Label text="Don't have an account?" class="signup-text" />
+                <Label 
+                    text="Sign Up" 
+                    tap="onSignupTap" 
+                    class="link-text-bold" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -1,3 +1,4 @@
+<!-- D:\Professional_life\personal_projects\ParkinTrace\app\heart-rate-page.xml -->
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <ActionBar title="Heart Rate Details">
         <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />

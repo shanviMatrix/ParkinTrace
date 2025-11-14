@@ -1,0 +1,106 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Learn About Parkinson's">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="disease-container">
+            
+            <!-- Header -->
+            <StackLayout class="disease-header">
+                <Label text="🧠" fontSize="60" horizontalAlignment="center" />
+                <Label text="Understanding Parkinson's Disease" class="disease-title" />
+                <Label text="Comprehensive Guide" class="disease-subtitle" />
+            </StackLayout>
+
+            <!-- What is Parkinson's -->
+            <StackLayout class="info-card">
+                <Label text="What is Parkinson's?" class="card-header" />
+                <Label textWrap="true" class="card-content">
+                    <Span text="Parkinson's disease is a progressive nervous system disorder that affects movement. Symptoms start gradually, sometimes starting with a barely noticeable tremor in just one hand. Tremors are common, but the disorder may also cause stiffness or slowing of movement." />
+                </Label>
+            </StackLayout>
+
+            <!-- Symptoms -->
+            <StackLayout class="info-card">
+                <Label text="Common Symptoms" class="card-header" />
+                <StackLayout class="symptom-item">
+                    <Label text="• Tremor" class="symptom-title" />
+                    <Label text="Shaking, usually begins in hands or fingers" class="symptom-desc" textWrap="true" />
+                </StackLayout>
+                <StackLayout class="symptom-item">
+                    <Label text="• Slowed Movement" class="symptom-title" />
+                    <Label text="Bradykinesia makes simple tasks difficult and time-consuming" class="symptom-desc" textWrap="true" />
+                </StackLayout>
+                <StackLayout class="symptom-item">
+                    <Label text="• Muscle Rigidity" class="symptom-title" />
+                    <Label text="Stiff muscles can occur in any part of the body" class="symptom-desc" textWrap="true" />
+                </StackLayout>
+                <StackLayout class="symptom-item">
+                    <Label text="• Impaired Balance" class="symptom-title" />
+                    <Label text="Posture problems and increased risk of falls" class="symptom-desc" textWrap="true" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Stages -->
+            <StackLayout class="info-card">
+                <Label text="Five Stages of Parkinson's" class="card-header" />
+                
+                <StackLayout class="stage-card stage-1">
+                    <Label text="Stage 1 - Mild" class="stage-title" />
+                    <Label text="Symptoms on one side of body, minimal impact on daily activities" class="stage-desc" textWrap="true" />
+                </StackLayout>
+
+                <StackLayout class="stage-card stage-2">
+                    <Label text="Stage 2 - Moderate" class="stage-title" />
+                    <Label text="Symptoms on both sides, daily activities become difficult" class="stage-desc" textWrap="true" />
+                </StackLayout>
+
+                <StackLayout class="stage-card stage-3">
+                    <Label text="Stage 3 - Mid-stage" class="stage-title" />
+                    <Label text="Loss of balance, falls become common, still independent" class="stage-desc" textWrap="true" />
+                </StackLayout>
+
+                <StackLayout class="stage-card stage-4">
+                    <Label text="Stage 4 - Advanced" class="stage-title" />
+                    <Label text="Severe symptoms, assistance needed for daily activities" class="stage-desc" textWrap="true" />
+                </StackLayout>
+
+                <StackLayout class="stage-card stage-5">
+                    <Label text="Stage 5 - Final" class="stage-title" />
+                    <Label text="Unable to stand or walk, full-time care required" class="stage-desc" textWrap="true" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Management Tips -->
+            <StackLayout class="info-card">
+                <Label text="Management Tips" class="card-header" />
+                <Label textWrap="true" class="card-content">
+                    <Span text="💊 " fontWeight="bold" />
+                    <Span text="Take medications as prescribed" />
+                    <Span text="&#10;" />
+                    <Span text="🏃 " fontWeight="bold" />
+                    <Span text="Regular exercise improves mobility" />
+                    <Span text="&#10;" />
+                    <Span text="🥗 " fontWeight="bold" />
+                    <Span text="Healthy diet with fiber and water" />
+                    <Span text="&#10;" />
+                    <Span text="😴 " fontWeight="bold" />
+                    <Span text="Get adequate sleep and rest" />
+                    <Span text="&#10;" />
+                    <Span text="🧘 " fontWeight="bold" />
+                    <Span text="Physical therapy and yoga help" />
+                </Label>
+            </StackLayout>
+
+            <!-- Resources -->
+            <StackLayout class="info-card">
+                <Label text="Helpful Resources" class="card-header" />
+                <Button text="📞 Parkinson's Foundation Helpline" class="resource-button" tap="onHelplineTap" />
+                <Button text="🌐 Online Support Groups" class="resource-button" tap="onSupportGroupTap" />
+                <Button text="📚 Educational Videos" class="resource-button" tap="onVideosTap" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>

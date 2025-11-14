@@ -4,25 +4,38 @@
     navigatingTo="onNavigatingTo" 
     navigatingFrom="onNavigatingFrom">
 
-    <ActionBar title="ParkinTrace">
-        <NavigationButton text="☰" tap="toggleDrawer" />
+    <ActionBar class="modern-actionbar">
+        <GridLayout columns="auto, *, auto" width="100%">
+            <Label col="0" text="☰" tap="toggleDrawer" class="menu-icon" />
+            <StackLayout col="1" orientation="horizontal" horizontalAlignment="center">
+                <Label text="ParkinTrace" class="app-logo" />
+            </StackLayout>
+            <Label col="2" text="🔔" class="notification-icon" tap="onNotificationTap" />
+        </GridLayout>
     </ActionBar>
 
-    <sd:RadSideDrawer id="drawer">
+    <sd:RadSideDrawer id="drawer" drawerLocation="Left">
 
         <sd:RadSideDrawer.drawerContent>
-            <StackLayout class="drawer-content">
-                <StackLayout class="drawer-profile">
-                    <Label text="Shanvi" class="drawer-profile-name" />
-                    <Label text="Patient ID: 12300556" class="drawer-profile-id" />
+            <ScrollView>
+                <StackLayout class="drawer-content">
+                    <StackLayout class="drawer-profile">
+                        <Label text="👤" fontSize="50" horizontalAlignment="center" marginBottom="10" />
+                        <Label text="{{ userName }}" class="drawer-profile-name" />
+                        <Label text="ID: {{ patientId }}" class="drawer-profile-id" />
+                    </StackLayout>
+                    
+                    <StackLayout class="drawer-menu">
+                        <Label text="📋 My Profile" class="drawer-link" tap="onProfileTap" />
+                        <Label text="👨‍⚕️ My Doctor" class="drawer-link" tap="onDoctorPageTap" />
+                        <Label text="📊 Health Charts" class="drawer-link" tap="onHealthChartsTap" />
+                        <Label text="📚 Learn about Parkinson's" class="drawer-link" tap="onLearnTap" />
+                        <Label text="💬 Send Feedback" class="drawer-link" tap="onFeedbackTap" />
+                        <Label text="⚙️ Settings" class="drawer-link" tap="onSettingsTap" />
+                        <Label text="🚪 Logout" class="drawer-link drawer-logout" tap="onLogoutTap" />
+                    </StackLayout>
                 </StackLayout>
-                
-                <StackLayout>
-                    <Label text="Learn about Parkinson's" class="drawer-link" tap="onLearnTap" />
-                    <Label text="Update Doctor Info" class="drawer-link" tap="onUpdateDoctorTap" />
-                    <Label text="Logout" class="drawer-link drawer-logout" tap="onLogoutTap" />
-                </StackLayout>
-            </StackLayout>
+            </ScrollView>
         </sd:RadSideDrawer.drawerContent>
 
         <sd:RadSideDrawer.mainContent>
@@ -30,36 +43,135 @@
             <GridLayout rows="*, auto">
                 
                 <ScrollView row="0">
-                    <StackLayout padding="15">
-                        <Label text="Live Vitals" class="section-title" />
-                        <GridLayout columns="*, *" rows="auto, auto">
-                            <StackLayout col="0" row="0" class="card" tap="onCardTap">
-                                <Label text="Heart Rate" class="card-title" />
-                                <Label text="{{ heartRate }}" class="card-value" /> 
-                                <Label text="bpm" class="card-unit" />
+                    <StackLayout padding="0" class="main-container">
+                        
+                        <!-- Hero Section with Greeting -->
+                        <StackLayout class="hero-section">
+                            <Label text="{{ greetingText }}" class="greeting-text" />
+                            <Label text="{{ userName }}" class="greeting-name" />
+                            <Label text="Your health is being monitored" class="greeting-subtitle" />
+                        </StackLayout>
+
+                        <!-- Quick Status Cards -->
+                        <GridLayout columns="*, *" rows="auto" class="status-cards-container">
+                            <StackLayout col="0" class="mini-card status-good">
+                                <Label text="✓" class="status-icon" />
+                                <Label text="Vitals Normal" class="status-text" />
                             </StackLayout>
-                            <StackLayout col="1" row="0" class="card" tap="onOxygenCardTap">
-                                <Label text="Blood Oxygen" class="card-title" />
-                                <Label text="{{ oxygen }}" class="card-value" /> 
-                                <Label text="SpO2 %" class="card-unit" />
-                            </StackLayout>
-                            <StackLayout col="0" row="1" class="{{ tremorStatusClass }}" tap="onCardTap">
-                                <Label text="Tremor Status" class="card-title" />
-                                <Label text="{{ tremor }}" class="card-value" /> 
-                            </StackLayout>
-                            <StackLayout col="1" row="1" class="{{ fallStatusClass }}" tap="onCardTap">
-                                <Label text="Fall Detection" class="card-title" />
-                                <Label text="{{ fall }}" class="card-value" /> 
+                            <StackLayout col="1" class="mini-card status-monitoring">
+                                <Label text="📡" class="status-icon" />
+                                <Label text="Monitoring" class="status-text" />
                             </StackLayout>
                         </GridLayout>
+
+                        <!-- Live Vitals with Charts -->
+                        <Label text="Live Vitals" class="section-title-modern" />
+                        
+                        <!-- Heart Rate Card with Mini Chart -->
+                        <StackLayout class="vital-card-modern" tap="onCardTap">
+                            <GridLayout columns="auto, *, auto" rows="auto">
+                                <StackLayout col="0" class="vital-icon-container">
+                                    <Label text="❤️" fontSize="32" />
+                                </StackLayout>
+                                <StackLayout col="1" paddingLeft="15">
+                                    <Label text="Heart Rate" class="vital-label-modern" />
+                                    <StackLayout orientation="horizontal">
+                                        <Label text="{{ heartRate }}" class="vital-value-modern" />
+                                        <Label text="bpm" class="vital-unit-modern" />
+                                    </StackLayout>
+                                    <Label text="Normal range: 60-100" class="vital-range" />
+                                </StackLayout>
+                                <Label col="2" text="📊" fontSize="24" class="chart-indicator" />
+                            </GridLayout>
+                            <!-- Mini Sparkline Placeholder -->
+                            <StackLayout class="sparkline-container">
+                                <Label text="▁▂▃▅▄▃▄▅▆▅▄▃▂▁" class="sparkline-text" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Blood Oxygen Card -->
+                        <StackLayout class="vital-card-modern" tap="onOxygenCardTap">
+                            <GridLayout columns="auto, *, auto" rows="auto">
+                                <StackLayout col="0" class="vital-icon-container">
+                                    <Label text="🫁" fontSize="32" />
+                                </StackLayout>
+                                <StackLayout col="1" paddingLeft="15">
+                                    <Label text="Blood Oxygen" class="vital-label-modern" />
+                                    <StackLayout orientation="horizontal">
+                                        <Label text="{{ oxygen }}" class="vital-value-modern" />
+                                        <Label text="%" class="vital-unit-modern" />
+                                    </StackLayout>
+                                    <Label text="Normal: 95-100%" class="vital-range" />
+                                </StackLayout>
+                                <Label col="2" text="📊" fontSize="24" class="chart-indicator" />
+                            </GridLayout>
+                            <StackLayout class="sparkline-container">
+                                <Label text="▄▅▅▆▆▅▅▆▆▅▄▅▅▆" class="sparkline-text" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Alert Cards -->
+                        <GridLayout columns="*, *" rows="auto">
+                            <StackLayout col="0" class="{{ tremorStatusClass }}" tap="onTremorDetailTap">
+                                <Label text="🤝" fontSize="28" />
+                                <Label text="Tremor" class="card-title-small" />
+                                <Label text="{{ tremor }}" class="card-status-text" /> 
+                            </StackLayout>
+                            
+                            <StackLayout col="1" class="{{ fallStatusClass }}" tap="onFallDetailTap">
+                                <Label text="🚨" fontSize="28" />
+                                <Label text="Fall Alert" class="card-title-small" />
+                                <Label text="{{ fall }}" class="card-status-text" /> 
+                            </StackLayout>
+                        </GridLayout>
+
+                        <!-- Today's Activity Summary -->
+                        <Label text="Today's Summary" class="section-title-modern" />
+                        <GridLayout columns="*, *, *" rows="auto" class="activity-summary">
+                            <StackLayout col="0" class="summary-stat">
+                                <Label text="0" class="summary-number" />
+                                <Label text="Falls" class="summary-label" />
+                            </StackLayout>
+                            <StackLayout col="1" class="summary-stat">
+                                <Label text="{{ tremorCount }}" class="summary-number" />
+                                <Label text="Tremors" class="summary-label" />
+                            </StackLayout>
+                            <StackLayout col="2" class="summary-stat">
+                                <Label text="8:32" class="summary-number" />
+                                <Label text="Hours" class="summary-label" />
+                            </StackLayout>
+                        </GridLayout>
+
+                        <!-- Quick Actions -->
+                        <Label text="Quick Actions" class="section-title-modern" />
+                        <GridLayout columns="*, *" rows="auto, auto">
+                            <StackLayout col="0" row="0" class="action-card" tap="onMedicationTap">
+                                <Label text="💊" fontSize="32" />
+                                <Label text="Medication" class="action-text" />
+                            </StackLayout>
+                            <StackLayout col="1" row="0" class="action-card" tap="onExerciseTap">
+                                <Label text="🏃" fontSize="32" />
+                                <Label text="Exercise" class="action-text" />
+                            </StackLayout>
+                            <StackLayout col="0" row="1" class="action-card" tap="onHealthChartsTap">
+                                <Label text="📊" fontSize="32" />
+                                <Label text="Reports" class="action-text" />
+                            </StackLayout>
+                            <StackLayout col="1" row="1" class="action-card" tap="onAppointmentsTap">
+                                <Label text="📅" fontSize="32" />
+                                <Label text="Appointments" class="action-text" />
+                            </StackLayout>
+                        </GridLayout>
+
                     </StackLayout>
                 </ScrollView>
 
-                <!-- Row 1: "Button Area" (Same as before) -->
-                <StackLayout row="1" orientation="vertical">
-                    <Button text="Connect to Doctor" class="doctor-button" tap="onDoctorTap" />
-                    <Button text="SOS" class="sos-button" tap="onSOSTap" />
+                <!-- Bottom Action Buttons -->
+                <StackLayout row="1" orientation="vertical" class="bottom-actions">
+                    <Button text="📞 Connect to Doctor" class="doctor-button-modern" tap="onDoctorTap" />
+                    <Button text="🆘 Emergency SOS" class="sos-button-modern" tap="onSOSTap" />
                 </StackLayout>
+                
             </GridLayout>
 
         </sd:RadSideDrawer.mainContent>

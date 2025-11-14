@@ -1,2 +1,2 @@
-<Frame defaultPage="main-page">
-</Frame>
+<!-- D:\Professional_life\personal_projects\ParkinTrace\app\app-root.xml -->
+<Frame defaultPage="Auth/login-page"></Frame>

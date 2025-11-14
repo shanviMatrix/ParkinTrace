@@ -1,0 +1,107 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="My Doctor">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="doctor-container">
+            
+            <!-- Doctor Profile Card -->
+            <StackLayout class="doctor-profile-card">
+                <Label text="👨‍⚕️" fontSize="80" horizontalAlignment="center" />
+                <Label text="{{ doctorName }}" class="doctor-name" />
+                <Label text="{{ doctorSpecialization }}" class="doctor-specialization" />
+                <Label text="📍 City Medical Center" class="doctor-location" />
+                <Button text="🔄 Change Doctor" class="change-doctor-btn" tap="onChangeDoctorTap" marginTop="15" />
+            </StackLayout>
+
+            <!-- Contact Options -->
+            <StackLayout class="contact-options">
+                <Label text="Quick Actions" class="section-title-small" />
+                
+                <Button text="📞 Call Doctor" class="action-button call-button" tap="onCallTap" />
+                <Button text="💬 Send Message" class="action-button message-button" tap="onMessageTap" />
+                <Button text="📅 Book Appointment" class="action-button appointment-button" tap="onAppointmentTap" />
+                <Button text="🆘 Emergency Contact" class="action-button emergency-button" tap="onEmergencyTap" />
+            </StackLayout>
+
+            <!-- Doctor Info -->
+            <StackLayout class="profile-section">
+                <Label text="Doctor Information" class="section-header" />
+                
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Phone:" class="info-label" />
+                    <Label col="1" text="{{ doctorPhone }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Email:" class="info-label" />
+                    <Label col="1" text="{{ doctorEmail }}" class="info-value" textWrap="true" />
+                </GridLayout>
+
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Experience:" class="info-label" />
+                    <Label col="1" text="{{ doctorExperience }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Clinic Hours:" class="info-label" />
+                    <Label col="1" text="{{ clinicHours }}" class="info-value" textWrap="true" />
+                </GridLayout>
+            </StackLayout>
+
+            <!-- Upcoming Appointments -->
+            <StackLayout class="profile-section">
+                <Label text="Upcoming Appointments" class="section-header" />
+                
+                <StackLayout class="appointment-card">
+                    <GridLayout columns="60, *">
+                        <StackLayout col="0" class="date-badge">
+                            <Label text="NOV" class="date-month" />
+                            <Label text="18" class="date-day" />
+                        </StackLayout>
+                        <StackLayout col="1" padding="5">
+                            <Label text="Regular Checkup" class="appointment-title" />
+                            <Label text="⏰ 10:00 AM - 10:30 AM" class="appointment-time" />
+                            <Label text="📍 City Medical Center" class="appointment-location" />
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+
+                <Button text="+ Schedule New Appointment" class="schedule-new-btn" tap="onScheduleNewTap" />
+            </StackLayout>
+
+            <!-- Medical Notes -->
+            <StackLayout class="profile-section">
+                <Label text="Latest Medical Notes" class="section-header" />
+                
+                <StackLayout class="note-card">
+                    <Label text="Last Visit: Nov 4, 2025" class="note-date" />
+                    <Label textWrap="true" class="note-text">
+                        <Span text="Patient shows improvement in tremor control. Medication dosage maintained. Recommended physical therapy twice weekly. Follow-up in 2 weeks." />
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Prescriptions -->
+            <StackLayout class="profile-section">
+                <Label text="Active Prescriptions" class="section-header" />
+                
+                <StackLayout class="prescription-card">
+                    <Label text="Carbidopa-Levodopa" class="prescription-name" />
+                    <Label text="25-100mg, 3 times daily" class="prescription-dosage" />
+                    <Label text="Refills remaining: 2" class="prescription-refills" />
+                </StackLayout>
+
+                <StackLayout class="prescription-card">
+                    <Label text="Pramipexole" class="prescription-name" />
+                    <Label text="0.5mg, once daily" class="prescription-dosage" />
+                    <Label text="Refills remaining: 1" class="prescription-refills" />
+                </StackLayout>
+
+                <Button text="📋 Request Refill" class="refill-btn" tap="onRefillTap" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -1,0 +1,112 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Health Analytics">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="charts-container">
+            
+            <Label text="📊 Your Health Trends" class="page-title" />
+
+            <!-- Time Filter -->
+            <StackLayout class="filter-section">
+                <Label text="Time Period:" class="filter-label" />
+                <GridLayout columns="*, *, *" class="filter-buttons">
+                    <Button col="0" text="24H" class="filter-btn filter-active" tap="onFilter24h" />
+                    <Button col="1" text="7D" class="filter-btn" tap="onFilter7d" />
+                    <Button col="2" text="30D" class="filter-btn" tap="onFilter30d" />
+                </GridLayout>
+            </StackLayout>
+
+            <!-- Heart Rate Chart -->
+            <StackLayout class="chart-card">
+                <Label text="❤️ Heart Rate Trend" class="chart-title" />
+                <StackLayout class="chart-visual">
+                    <Label text="📈" fontSize="50" horizontalAlignment="center" />
+                    <Label text="Average: 82 bpm" class="chart-stat" />
+                    <GridLayout columns="*, *, *" class="chart-stats-grid">
+                        <StackLayout col="0">
+                            <Label text="Low" class="stat-label" />
+                            <Label text="65" class="stat-value" />
+                        </StackLayout>
+                        <StackLayout col="1">
+                            <Label text="Avg" class="stat-label" />
+                            <Label text="82" class="stat-value" />
+                        </StackLayout>
+                        <StackLayout col="2">
+                            <Label text="High" class="stat-label" />
+                            <Label text="105" class="stat-value" />
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Oxygen Level Chart -->
+            <StackLayout class="chart-card">
+                <Label text="🫁 Blood Oxygen Trend" class="chart-title" />
+                <StackLayout class="chart-visual">
+                    <Label text="📊" fontSize="50" horizontalAlignment="center" />
+                    <Label text="Average: 98%" class="chart-stat" />
+                    <GridLayout columns="*, *, *" class="chart-stats-grid">
+                        <StackLayout col="0">
+                            <Label text="Low" class="stat-label" />
+                            <Label text="95%" class="stat-value" />
+                        </StackLayout>
+                        <StackLayout col="1">
+                            <Label text="Avg" class="stat-label" />
+                            <Label text="98%" class="stat-value" />
+                        </StackLayout>
+                        <StackLayout col="2">
+                            <Label text="High" class="stat-label" />
+                            <Label text="100%" class="stat-value" />
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Tremor Frequency -->
+            <StackLayout class="chart-card">
+                <Label text="🤝 Tremor Detection" class="chart-title" />
+                <StackLayout class="chart-visual">
+                    <Label text="📉" fontSize="50" horizontalAlignment="center" />
+                    <Label text="Detected: 12 times today" class="chart-stat" />
+                    <GridLayout columns="*, *" class="chart-stats-grid">
+                        <StackLayout col="0">
+                            <Label text="Today" class="stat-label" />
+                            <Label text="12" class="stat-value" />
+                        </StackLayout>
+                        <StackLayout col="1">
+                            <Label text="Yesterday" class="stat-label" />
+                            <Label text="15" class="stat-value" />
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Activity Summary -->
+            <StackLayout class="chart-card">
+                <Label text="📋 Weekly Summary" class="chart-title" />
+                <StackLayout class="summary-item">
+                    <Label text="Total Falls Detected: 2" class="summary-text" />
+                </StackLayout>
+                <StackLayout class="summary-item">
+                    <Label text="SOS Alerts Sent: 0" class="summary-text" />
+                </StackLayout>
+                <StackLayout class="summary-item">
+                    <Label text="Doctor Consultations: 1" class="summary-text" />
+                </StackLayout>
+                <StackLayout class="summary-item">
+                    <Label text="Medication Adherence: 95%" class="summary-text" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Export Options -->
+            <StackLayout class="export-section">
+                <Label text="Export Health Data" class="export-title" />
+                <Button text="📄 Download PDF Report" class="export-btn" tap="onExportPDF" />
+                <Button text="📧 Email to Doctor" class="export-btn" tap="onEmailDoctor" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>

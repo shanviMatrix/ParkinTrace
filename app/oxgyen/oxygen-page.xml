@@ -1,0 +1,36 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Blood Oxygen Details">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="detail-container">
+            <Label text="Current Blood Oxygen" class="card-title" horizontalAlignment="center" marginTop="20" />
+            
+            <Label text="{{ currentO2 }}" class="detail-value-large" />
+            <Label text="SpO2 %" class="detail-unit-large" />
+
+            <StackLayout class="chart-placeholder">
+                <Label text="📊" fontSize="40" />
+                <Label text="Blood Oxygen Graph" fontSize="18" fontWeight="bold" marginTop="10" />
+                <Label text="Historical data visualization coming soon" fontSize="14" marginTop="5" />
+            </StackLayout>
+
+            <StackLayout class="profile-section" marginTop="20">
+                <Label text="Quick Stats" class="section-header" />
+                <GridLayout columns="*, *" rows="auto">
+                    <StackLayout col="0" class="card" margin="5">
+                        <Label text="Avg (24h)" class="card-title" />
+                        <Label text="98" class="card-value" fontSize="24" />
+                        <Label text="%" class="card-unit" />
+                    </StackLayout>
+                    <StackLayout col="1" class="card" margin="5">
+                        <Label text="Low (24h)" class="card-title" />
+                        <Label text="95" class="card-value" fontSize="24" />
+                        <Label text="%" class="card-unit" />
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

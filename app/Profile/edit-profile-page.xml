@@ -1,0 +1,98 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Edit Profile">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="edit-profile-container">
+            
+            <Label text="Personal Information" class="edit-section-title" />
+            
+            <StackLayout class="edit-field">
+                <Label text="Age" class="input-label" />
+                <TextField hint="Enter age" keyboardType="number" text="{{ age }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Blood Group" class="input-label" />
+                <TextField hint="e.g., A+, O-, B+" text="{{ bloodGroup }}" class="input" />
+            </StackLayout>
+
+            <Label text="Doctor Information" class="edit-section-title" />
+            
+            <StackLayout class="edit-field">
+                <Label text="Doctor Name" class="input-label" />
+                <TextField hint="Enter doctor's name" text="{{ doctorName }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Specialization" class="input-label" />
+                <TextField hint="e.g., Neurologist" text="{{ doctorSpecialization }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Doctor's Phone" class="input-label" />
+                <TextField hint="Enter phone number" keyboardType="phone" text="{{ doctorPhone }}" class="input" />
+            </StackLayout>
+
+            <Label text="Emergency Contact 1" class="edit-section-title" />
+            
+            <StackLayout class="edit-field">
+                <Label text="Name" class="input-label" />
+                <TextField hint="Contact name" text="{{ emergencyContact1Name }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Phone" class="input-label" />
+                <TextField hint="Contact phone" keyboardType="phone" text="{{ emergencyContact1Phone }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Relation" class="input-label" />
+                <TextField hint="e.g., Spouse, Child" text="{{ emergencyContact1Relation }}" class="input" />
+            </StackLayout>
+
+            <Label text="Emergency Contact 2" class="edit-section-title" />
+            
+            <StackLayout class="edit-field">
+                <Label text="Name" class="input-label" />
+                <TextField hint="Contact name" text="{{ emergencyContact2Name }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Phone" class="input-label" />
+                <TextField hint="Contact phone" keyboardType="phone" text="{{ emergencyContact2Phone }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Relation" class="input-label" />
+                <TextField hint="e.g., Friend, Sibling" text="{{ emergencyContact2Relation }}" class="input" />
+            </StackLayout>
+
+            <Label text="Medical History" class="edit-section-title" />
+            
+            <StackLayout class="edit-field">
+                <Label text="Diagnosed Date" class="input-label" />
+                <TextField hint="e.g., Jan 2020" text="{{ diagnosedDate }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Current Stage" class="input-label" />
+                <TextField hint="e.g., Stage 2" text="{{ currentStage }}" class="input" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Medications" class="input-label" />
+                <TextView hint="List your medications" text="{{ medications }}" class="text-area" height="80" />
+            </StackLayout>
+
+            <StackLayout class="edit-field">
+                <Label text="Allergies" class="input-label" />
+                <TextView hint="List any allergies" text="{{ allergies }}" class="text-area" height="60" />
+            </StackLayout>
+
+            <Button text="💾 Save Profile" tap="onSaveTap" class="btn-primary save-button" />
+
+        </StackLayout>
+    </ScrollView>
+</Page>

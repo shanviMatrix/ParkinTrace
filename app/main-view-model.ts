@@ -1,3 +1,4 @@
+// D:\Professional_life\personal_projects\ParkinTrace\app\main-view-model.ts
 import { Observable } from "@nativescript/core";
 
 export class HelloWorldModel extends Observable {

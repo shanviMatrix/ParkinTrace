@@ -1,0 +1,121 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="My Profile">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+        <ActionItem text="Edit" tap="onEditTap" android.position="popup" ios.position="right" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="profile-container">
+            
+            <StackLayout class="profile-header-card">
+                <Label text="👤" class="profile-avatar" />
+                <Label text="{{ fullName }}" class="profile-name-large" />
+                <Label text="Patient ID: {{ patientId }}" class="profile-id-text" />
+            </StackLayout>
+
+            <StackLayout class="profile-section">
+                <Label text="Personal Information" class="section-header" />
+                
+                <GridLayout columns="120, *" class="info-row">
+                    <Label col="0" text="Email:" class="info-label" />
+                    <Label col="1" text="{{ email }}" class="info-value" textWrap="true" />
+                </GridLayout>
+
+                <GridLayout columns="120, *" class="info-row">
+                    <Label col="0" text="Phone:" class="info-label" />
+                    <Label col="1" text="{{ phone }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="120, *" class="info-row">
+                    <Label col="0" text="Age:" class="info-label" />
+                    <Label col="1" text="{{ age }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="120, *" class="info-row">
+                    <Label col="0" text="Blood Group:" class="info-label" />
+                    <Label col="1" text="{{ bloodGroup }}" class="info-value" />
+                </GridLayout>
+            </StackLayout>
+
+            <StackLayout class="profile-section">
+                <Label text="Doctor Information" class="section-header" />
+                
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Doctor Name:" class="info-label" />
+                    <Label col="1" text="{{ doctorName }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Specialization:" class="info-label" />
+                    <Label col="1" text="{{ doctorSpecialization }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="140, *" class="info-row">
+                    <Label col="0" text="Contact:" class="info-label" />
+                    <Label col="1" text="{{ doctorPhone }}" class="info-value" />
+                </GridLayout>
+            </StackLayout>
+
+            <StackLayout class="profile-section">
+                <Label text="Emergency Contacts" class="section-header" />
+                
+                <StackLayout class="contact-card">
+                    <Label text="Primary Contact" class="contact-title" />
+                    <GridLayout columns="100, *" class="info-row-small">
+                        <Label col="0" text="Name:" class="info-label-small" />
+                        <Label col="1" text="{{ emergencyContact1Name }}" class="info-value-small" />
+                    </GridLayout>
+                    <GridLayout columns="100, *" class="info-row-small">
+                        <Label col="0" text="Phone:" class="info-label-small" />
+                        <Label col="1" text="{{ emergencyContact1Phone }}" class="info-value-small" />
+                    </GridLayout>
+                    <GridLayout columns="100, *" class="info-row-small">
+                        <Label col="0" text="Relation:" class="info-label-small" />
+                        <Label col="1" text="{{ emergencyContact1Relation }}" class="info-value-small" />
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout class="contact-card">
+                    <Label text="Secondary Contact" class="contact-title" />
+                    <GridLayout columns="100, *" class="info-row-small">
+                        <Label col="0" text="Name:" class="info-label-small" />
+                        <Label col="1" text="{{ emergencyContact2Name }}" class="info-value-small" />
+                    </GridLayout>
+                    <GridLayout columns="100, *" class="info-row-small">
+                        <Label col="0" text="Phone:" class="info-label-small" />
+                        <Label col="1" text="{{ emergencyContact2Phone }}" class="info-value-small" />
+                    </GridLayout>
+                    <GridLayout columns="100, *" class="info-row-small">
+                        <Label col="0" text="Relation:" class="info-label-small" />
+                        <Label col="1" text="{{ emergencyContact2Relation }}" class="info-value-small" />
+                    </GridLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="profile-section">
+                <Label text="Medical History" class="section-header" />
+                
+                <GridLayout columns="150, *" class="info-row">
+                    <Label col="0" text="Diagnosed Date:" class="info-label" />
+                    <Label col="1" text="{{ diagnosedDate }}" class="info-value" />
+                </GridLayout>
+
+                <GridLayout columns="150, *" class="info-row">
+                    <Label col="0" text="Current Stage:" class="info-label" />
+                    <Label col="1" text="{{ currentStage }}" class="info-value" />
+                </GridLayout>
+
+                <StackLayout class="info-row">
+                    <Label text="Medications:" class="info-label" marginBottom="8" />
+                    <Label text="{{ medications }}" class="info-value" textWrap="true" />
+                </StackLayout>
+
+                <StackLayout class="info-row">
+                    <Label text="Allergies:" class="info-label" marginBottom="8" />
+                    <Label text="{{ allergies }}" class="info-value" textWrap="true" />
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>

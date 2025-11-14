@@ -1,116 +1,1218 @@
-﻿ActionBar {
-  background-color: #0c59a4;
+﻿/* Global Styles */
+Page {
+  background-color: #f5f7fa;
+}
+
+ActionBar {
+  background-color: #667eea;
   color: white;
-}
-.section-title {
-  font-size: 20;
   font-weight: bold;
-  margin-top: 20;
-  margin-bottom: 10;
 }
-.card {
-  background-color: white;
-  border-radius: 8;
-  padding: 15;
-  margin: 8;
-  box-shadow: 0 2 5 rgba(0, 0, 0, 0.1);
+
+/* Auth Pages */
+.login-container {
+  background-color: #667eea;
+  padding: 20;
+}
+
+.login-header {
+  margin-top: 40;
+  margin-bottom: 30;
+}
+
+.app-title {
+  font-size: 32;
+  font-weight: bold;
+  color: white;
   text-align: center;
+  margin-top: 10;
 }
-.card-title {
+
+.app-subtitle {
+  font-size: 16;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5;
+}
+
+.login-form {
+  background-color: white;
+  border-radius: 20;
+  padding: 30 20;
+  margin: 0 10;
+}
+
+.form-title {
+  font-size: 24;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 25;
+}
+
+.input-field {
+  margin-bottom: 20;
+}
+
+.input-label {
   font-size: 14;
   font-weight: 600;
   color: #555;
-  margin-bottom: 10;
+  margin-bottom: 8;
 }
-.card-value {
-  font-size: 28;
-  font-weight: bold;
-  color: #0c59a4;
+
+.input {
+  font-size: 16;
+  padding: 15;
+  border-width: 1;
+  border-color: #ddd;
+  border-radius: 10;
+  background-color: #f9f9f9;
+  color: #333;
 }
-.card-unit {
-  font-size: 12;
-  color: #777;
-}
-.profile-card {
-  background-color: #f0f4f7;
-  padding: 20;
-}
-.profile-name {
-  font-size: 24;
-  font-weight: bold;
-}
-.doctor-button {
-  background-color: #4caf50;
+
+.btn-primary {
+  background-color: #667eea;
   color: white;
+  font-size: 18;
+  font-weight: bold;
+  border-radius: 12;
+  height: 50;
+  margin-top: 10;
+}
+
+.btn-primary:active {
+  background-color: #5568d3;
+}
+
+.link-text {
+  color: #667eea;
+  font-size: 14;
+}
+
+.link-text-bold {
+  color: #667eea;
+  font-size: 16;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5;
+}
+
+.signup-section {
+  margin-top: 30;
+  text-align: center;
+}
+
+.signup-text {
+  font-size: 14;
+  color: white;
+  text-align: center;
+}
+
+/* Dashboard Styles */
+.main-container {
+  background-color: #f5f7fa;
+}
+
+.modern-actionbar {
+  background-color: #667eea;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 28;
+  color: white;
+  padding: 10 15;
+  font-weight: bold;
+}
+
+.app-logo {
   font-size: 20;
   font-weight: bold;
-  height: 60;
-  margin: 10 10 10 10;
-  border-radius: 30;
-}
-.sos-button {
-  background-color: #d32f2f;
   color: white;
-  font-size: 22;
-  font-weight: bold;
-  height: 70;
-  margin: 0 10 10 10;
-  border-radius: 35;
+  text-align: center;
 }
+
+.notification-icon {
+  font-size: 24;
+  color: white;
+  padding: 10 15;
+}
+
+.hero-section {
+  background-color: #667eea;
+  padding: 30 20 40 20;
+  margin-bottom: 20;
+}
+
+.greeting-text {
+  font-size: 16;
+  color: #ffffff;
+  margin-bottom: 5;
+}
+
+.greeting-name {
+  font-size: 32;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8;
+}
+
+.greeting-subtitle {
+  font-size: 14;
+  color: #ffffff;
+}
+
+.status-cards-container {
+  margin: -20 15 20 15;
+}
+
+.mini-card {
+  background-color: white;
+  border-radius: 12;
+  padding: 15;
+  margin: 5;
+  text-align: center;
+}
+
+.status-good {
+  border-left-width: 4;
+  border-left-color: #48bb78;
+}
+
+.status-monitoring {
+  border-left-width: 4;
+  border-left-color: #4299e1;
+}
+
+.status-icon {
+  font-size: 20;
+  margin-bottom: 5;
+}
+
+.status-text {
+  font-size: 13;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.section-title-modern {
+  font-size: 20;
+  font-weight: bold;
+  color: #2d3748;
+  margin: 20 15 15 15;
+}
+
+.vital-card-modern {
+  background-color: white;
+  border-radius: 16;
+  padding: 20;
+  margin: 0 15 15 15;
+}
+
+.vital-icon-container {
+  background-color: #ffd6e8;
+  width: 60;
+  height: 60;
+  border-radius: 15;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.vital-label-modern {
+  font-size: 14;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 5;
+}
+
+.vital-value-modern {
+  font-size: 36;
+  font-weight: bold;
+  color: #2d3748;
+  margin-right: 5;
+}
+
+.vital-unit-modern {
+  font-size: 16;
+  color: #a0aec0;
+  vertical-align: bottom;
+  margin-top: 15;
+}
+
+.vital-range {
+  font-size: 12;
+  color: #48bb78;
+  margin-top: 5;
+}
+
+.chart-indicator {
+  color: #cbd5e0;
+}
+
+.sparkline-container {
+  background-color: #f7fafc;
+  border-radius: 8;
+  padding: 10;
+  margin-top: 15;
+}
+
+.sparkline-text {
+  font-size: 20;
+  color: #667eea;
+  text-align: center;
+  letter-spacing: 2;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16;
+  padding: 20;
+  margin: 8;
+  text-align: center;
+}
+
+.card:active {
+  background-color: #f8f9fa;
+}
+
+.card-title-small {
+  font-size: 12;
+  font-weight: 600;
+  color: #718096;
+  margin: 8 0 5 0;
+  text-transform: uppercase;
+}
+
+.card-status-text {
+  font-size: 16;
+  font-weight: bold;
+  color: #2d3748;
+}
+
 .card-tremor-alert {
   background-color: #fff3e0;
   border-width: 2;
   border-color: #ff9800;
 }
+
+.card-tremor-alert .card-value {
+  color: #f57c00;
+}
+
 .card-fall-alert {
   background-color: #ffebee;
   border-width: 2;
   border-color: #d32f2f;
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
-.drawer-content {
-  background-color: #f8f8f8;
-  padding: 20;
-}
-.drawer-profile {
-  background-color: #0c59a4;
-  color: white;
-  padding: 20;
-  margin: -20 -20 20 -20; /* Top/Left/Right/Bottom */
-}
-.drawer-profile-name {
-  font-size: 22;
-  font-weight: bold;
-  color: white;
-}
-.drawer-profile-id {
-  font-size: 14;
-  color: #eeeeee;
-}
-.drawer-link {
-  font-size: 18;
-  padding: 15 10;
-  color: #333333;
-}
-.drawer-logout {
-  margin-top: 30;
+.card-fall-alert .card-value {
   color: #d32f2f;
   font-weight: bold;
 }
-.drawer-link:hover {
-  background-color: #e0e0e0;
+
+.activity-summary {
+  background-color: white;
+  border-radius: 16;
+  padding: 20;
+  margin: 0 15 20 15;
+}
+
+.summary-stat {
+  text-align: center;
+  padding: 10 0;
+}
+
+.summary-number {
+  font-size: 28;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 5;
+}
+
+.summary-label {
+  font-size: 12;
+  color: #718096;
+}
+
+.action-card {
+  background-color: white;
+  border-radius: 14;
+  padding: 20;
+  margin: 7;
+  text-align: center;
+}
+
+.action-card:active {
+  background-color: #f7fafc;
+}
+
+.action-text {
+  font-size: 13;
+  font-weight: 600;
+  color: #4a5568;
+  margin-top: 8;
+}
+
+.bottom-actions {
+  background-color: white;
+  padding: 12 15;
+  border-top-width: 1;
+  border-top-color: #e2e8f0;
+}
+
+.doctor-button-modern {
+  background-color: #48bb78;
+  color: white;
+  font-size: 16;
+  font-weight: bold;
+  height: 52;
+  margin-bottom: 8;
+  border-radius: 12;
+}
+
+.sos-button-modern {
+  background-color: #f56565;
+  color: white;
+  font-size: 18;
+  font-weight: bold;
+  height: 56;
+  border-radius: 12;
+}
+
+/* Sidebar */
+.drawer-content {
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.drawer-profile {
+  background-color: #667eea;
+  color: white;
+  padding: 40 20 30 20;
+}
+
+.drawer-profile-name {
+  font-size: 24;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5;
+}
+
+.drawer-profile-id {
+  font-size: 13;
+  color: #ffffff;
+  margin-top: 3;
+}
+
+.drawer-menu {
+  padding: 10 0;
+}
+
+.drawer-link {
+  font-size: 16;
+  padding: 18 25;
+  color: #2d3748;
+  font-weight: 500;
+  border-bottom-width: 1;
+  border-bottom-color: #f0f0f0;
+}
+
+.drawer-link:active {
+  background-color: #f7fafc;
+}
+
+.drawer-logout {
+  margin-top: 20;
+  color: #e53e3e;
+  font-weight: 600;
+  border-bottom-width: 0;
+}
+
+/* Profile Pages */
+.profile-container {
+  background-color: #f5f7fa;
+  padding-bottom: 20;
+}
+
+.profile-header-card {
+  background-color: #667eea;
+  padding: 40 20 30 20;
+  margin-bottom: 15;
+}
+
+.profile-avatar {
+  background-color: #764ba2;
+  width: 100;
+  height: 100;
+  border-radius: 50;
+  text-align: center;
+  font-size: 50;
+  margin: 0 auto 15 auto;
+}
+
+.profile-name-large {
+  font-size: 26;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 5;
+}
+
+.profile-id-text {
+  font-size: 13;
+  color: #ffffff;
+  text-align: center;
+}
+
+.profile-section {
+  background-color: white;
+  margin: 12 15;
+  padding: 20;
+  border-radius: 16;
+}
+
+.section-header {
+  font-size: 18;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 18;
+  border-left-width: 4;
+  border-left-color: #667eea;
+  padding-left: 12;
+}
+
+.info-row {
+  padding: 14 0;
+  border-bottom-width: 1;
+  border-bottom-color: #f0f0f0;
+}
+
+.info-label {
+  font-size: 14;
+  font-weight: 600;
+  color: #718096;
+}
+
+.info-value {
+  font-size: 15;
+  color: #2d3748;
+}
+
+.contact-card {
+  background-color: #f7fafc;
+  padding: 16;
+  border-radius: 12;
+  margin-bottom: 12;
+  border-left-width: 4;
+  border-left-color: #4caf50;
+}
+
+.contact-title {
+  font-size: 15;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 12;
+}
+
+.info-row-small {
+  padding: 6 0;
+}
+
+.info-label-small {
+  font-size: 13;
+  font-weight: 600;
+  color: #718096;
+}
+
+.info-value-small {
+  font-size: 14;
+  color: #2d3748;
+}
+
+/* Edit Profile */
+.edit-profile-container {
+  padding: 20 15;
+  background-color: #f5f7fa;
+}
+
+.edit-section-title {
+  font-size: 18;
+  font-weight: bold;
+  color: #667eea;
+  margin-top: 20;
+  margin-bottom: 15;
+  padding-left: 5;
+}
+
+.edit-field {
+  margin-bottom: 18;
+}
+
+.text-area {
+  font-size: 15;
+  padding: 14;
+  border-width: 1;
+  border-color: #e2e8f0;
+  border-radius: 10;
+  background-color: white;
+  color: #2d3748;
+}
+
+.save-button {
+  margin-top: 30;
+  margin-bottom: 20;
+  height: 52;
+}
+
+/* Detail Pages */
+.detail-container {
+  padding: 20;
+  background-color: #f5f7fa;
+}
+
+.detail-value-large {
+  font-size: 72;
+  font-weight: bold;
+  color: #667eea;
+  text-align: center;
+  margin: 30 0;
+}
+
+.detail-unit-large {
+  font-size: 20;
+  color: #718096;
+  text-align: center;
+  margin-bottom: 40;
+}
+
+.chart-placeholder {
+  background-color: white;
+  border-radius: 16;
+  padding: 30;
+  text-align: center;
+  color: #a0aec0;
+  margin-top: 20;
+}
+
+/* Disease Overview */
+.disease-container {
+  background-color: #f5f7fa;
+  padding-bottom: 20;
+}
+
+.disease-header {
+  background-color: #667eea;
+  padding: 40 20 30 20;
+  margin-bottom: 15;
+}
+
+.disease-title {
+  font-size: 24;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 15;
+}
+
+.disease-subtitle {
+  font-size: 14;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5;
+}
+
+.info-card {
+  background-color: white;
+  margin: 12 15;
+  padding: 20;
+  border-radius: 16;
+}
+
+.card-header {
+  font-size: 20;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 15;
+  border-left-width: 4;
+  border-left-color: #667eea;
+  padding-left: 12;
+}
+
+.card-content {
+  font-size: 15;
+  color: #4a5568;
+}
+
+.symptom-item {
+  margin-bottom: 15;
+  padding: 12;
+  background-color: #f7fafc;
+  border-radius: 8;
+}
+
+.symptom-title {
+  font-size: 16;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 5;
+}
+
+.symptom-desc {
+  font-size: 14;
+  color: #718096;
+}
+
+.stage-card {
+  padding: 15;
+  margin-bottom: 12;
+  border-radius: 12;
+  border-left-width: 5;
+}
+
+.stage-1 {
+  background-color: #e6f7ff;
+  border-left-color: #1890ff;
+}
+
+.stage-2 {
+  background-color: #fff7e6;
+  border-left-color: #fa8c16;
+}
+
+.stage-3 {
+  background-color: #fffbe6;
+  border-left-color: #fadb14;
+}
+
+.stage-4 {
+  background-color: #fff2e8;
+  border-left-color: #ff7a45;
+}
+
+.stage-5 {
+  background-color: #fff1f0;
+  border-left-color: #f5222d;
+}
+
+.stage-title {
+  font-size: 16;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 8;
+}
+
+.stage-desc {
+  font-size: 14;
+  color: #4a5568;
+}
+
+.resource-button {
+  background-color: #667eea;
+  color: white;
+  font-size: 15;
+  font-weight: 600;
+  border-radius: 10;
+  height: 48;
+  margin-bottom: 12;
+}
+
+/* Health Charts */
+.charts-container {
+  background-color: #f5f7fa;
+  padding: 20 15;
+}
+
+.page-title {
+  font-size: 28;
+  font-weight: bold;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 20;
+}
+
+.filter-section {
+  background-color: white;
+  padding: 20;
+  border-radius: 16;
+  margin-bottom: 20;
+}
+
+.filter-label {
+  font-size: 14;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 12;
+}
+
+.filter-buttons {
+  margin-top: 10;
+}
+
+.filter-btn {
+  background-color: #f7fafc;
+  color: #4a5568;
+  font-size: 14;
+  font-weight: 600;
+  border-radius: 8;
+  height: 40;
+  margin: 0 5;
+}
+
+.filter-active {
+  background-color: #667eea;
+  color: white;
+}
+
+.chart-card {
+  background-color: white;
+  padding: 20;
+  border-radius: 16;
+  margin-bottom: 20;
+}
+
+.chart-title {
+  font-size: 18;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 15;
+}
+
+.chart-visual {
+  padding: 20 0;
+}
+
+.chart-stat {
+  font-size: 16;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+  margin: 15 0;
+}
+
+.chart-stats-grid {
+  margin-top: 20;
+  padding-top: 20;
+  border-top-width: 1;
+  border-top-color: #e2e8f0;
+}
+
+.stat-label {
+  font-size: 13;
+  color: #718096;
+  text-align: center;
+  margin-bottom: 5;
+}
+
+.stat-value {
+  font-size: 24;
+  font-weight: bold;
+  color: #2d3748;
+  text-align: center;
+}
+
+.summary-item {
+  padding: 12 0;
+  border-bottom-width: 1;
+  border-bottom-color: #f0f0f0;
+}
+
+.summary-text {
+  font-size: 15;
+  color: #4a5568;
+}
+
+.export-section {
+  background-color: white;
+  padding: 20;
+  border-radius: 16;
+  margin-top: 10;
+}
+
+.export-title {
+  font-size: 16;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 15;
+}
+
+.export-btn {
+  background-color: #48bb78;
+  color: white;
+  font-size: 15;
+  font-weight: 600;
+  border-radius: 10;
+  height: 48;
+  margin-bottom: 10;
+}
+
+/* Feedback Page */
+.feedback-container {
+  background-color: #f5f7fa;
+  padding-bottom: 30;
+}
+
+.feedback-header {
+  background-color: #667eea;
+  padding: 40 20 30 20;
+  margin-bottom: 20;
+}
+
+.feedback-title {
+  font-size: 24;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 15;
+}
+
+.feedback-subtitle {
+  font-size: 14;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5;
+}
+
+.feedback-section {
+  background-color: white;
+  margin: 12 15;
+  padding: 20;
+  border-radius: 16;
+}
+
+.question-text {
+  font-size: 16;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 15;
+}
+
+.rating-container {
+  margin: 15 0;
+}
+
+.star-icon {
+  font-size: 48;
+  text-align: center;
+  color: #fbbf24;
+}
+
+.rating-text {
+  font-size: 18;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+  margin-top: 10;
+}
+
+.option-item, .improve-option {
+  background-color: #f7fafc;
+  padding: 15;
+  border-radius: 10;
+  margin-bottom: 10;
+  border-left-width: 3;
+  border-left-color: #667eea;
+}
+
+.option-item:active, .improve-option:active {
+  background-color: #e6f2ff;
+}
+
+.checkbox-icon {
+  font-size: 24;
+  color: #667eea;
+  margin-right: 15;
+  width: 30;
+}
+
+.option-text {
+  font-size: 15;
+  color: #2d3748;
+  padding-left: 10;
+}
+
+.feedback-textarea {
+  background-color: #f7fafc;
+  border-width: 1;
+  border-color: #e2e8f0;
+  border-radius: 10;
+  padding: 15;
+  font-size: 15;
+  color: #2d3748;
+  margin-top: 10;
+}
+
+.submit-feedback-btn {
+  background-color: #48bb78;
+  color: white;
+  font-size: 18;
+  font-weight: bold;
+  border-radius: 12;
+  height: 52;
+  margin: 20 15;
+}
+
+.thank-you-text {
+  font-size: 13;
+  color: #718096;
+  text-align: center;
+  margin: 10 20 20 20;
+}
+
+.change-doctor-btn {
+  background-color: #764ba2;
+  color: white;
+  font-size: 14;
+  font-weight: 600;
+  border-radius: 10;
+  border-width: 2;
+  border-color: white;
+  height: 42;
+  width: 200;
+  horizontal-align: center;
+}
+
+/* Doctor Page */
+.doctor-container {
+  background-color: #f5f7fa;
+  padding-bottom: 20;
+}
+
+.doctor-profile-card {
+  background-color: #667eea;
+  padding: 40 20 30 20;
+  margin-bottom: 20;
+}
+
+.doctor-name {
+  font-size: 26;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 15;
+}
+
+.doctor-specialization {
+  font-size: 16;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5;
+}
+
+.doctor-location {
+  font-size: 14;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 8;
+}
+
+.contact-options {
+  padding: 0 15;
+  margin-bottom: 10;
+}
+
+.section-title-small {
+  font-size: 18;
+  font-weight: bold;
+  color: #2d3748;
+  margin: 15 0;
+}
+
+.action-button {
+  font-size: 16;
+  font-weight: 600;
+  border-radius: 12;
+  height: 52;
+  margin-bottom: 10;
+  color: white;
+}
+
+.call-button {
+  background-color: #48bb78;
+}
+
+.message-button {
+  background-color: #4299e1;
+}
+
+.appointment-button {
+  background-color: #ed8936;
+}
+
+.emergency-button {
+  background-color: #f56565;
+}
+
+.appointment-card {
+  background-color: #f7fafc;
+  padding: 15;
+  border-radius: 12;
+  margin-bottom: 15;
+  border-left-width: 4;
+  border-left-color: #667eea;
+}
+
+.date-badge {
+  background-color: #667eea;
+  border-radius: 8;
+  padding: 8;
+  text-align: center;
+  width: 60;
+  height: 60;
+}
+
+.date-month {
+  font-size: 11;
+  color: #ffffff;
+  text-align: center;
+}
+
+.date-day {
+  font-size: 24;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.appointment-title {
+  font-size: 16;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 5;
+}
+
+.appointment-time {
+  font-size: 13;
+  color: #718096;
+  margin-bottom: 3;
+}
+
+.appointment-location {
+  font-size: 13;
+  color: #718096;
+}
+
+.schedule-new-btn {
+  background-color: #667eea;
+  color: white;
+  font-size: 15;
+  font-weight: 600;
+  border-radius: 10;
+  height: 45;
+  margin-top: 5;
+}
+
+.note-card {
+  background-color: #fffaf0;
+  padding: 15;
+  border-radius: 10;
+  border-left-width: 3;
+  border-left-color: #ed8936;
+}
+
+.note-date {
+  font-size: 13;
+  font-weight: 600;
+  color: #744210;
+  margin-bottom: 10;
+}
+
+.note-text {
+  font-size: 14;
+  color: #744210;
+}
+
+.prescription-card {
+  background-color: #f0fff4;
+  padding: 15;
+  border-radius: 10;
+  margin-bottom: 12;
+  border-left-width: 3;
+  border-left-color: #48bb78;
+}
+
+.prescription-name {
+  font-size: 16;
+  font-weight: bold;
+  color: #22543d;
+  margin-bottom: 5;
+}
+
+.prescription-dosage {
+  font-size: 14;
+  color: #2f855a;
+  margin-bottom: 5;
+}
+
+.prescription-refills {
+  font-size: 13;
+  color: #38a169;
+}
+
+.refill-btn {
+  background-color: #48bb78;
+  color: white;
+  font-size: 15;
+  font-weight: 600;
+  border-radius: 10;
+  height: 45;
+  margin-top: 5;
+}
+
+.section-title {
+  font-size: 22;
+  font-weight: bold;
+  margin-top: 20;
+  margin-bottom: 15;
+  color: #2d3748;
+  padding-left: 5;
+}
+
+.card-title {
+  font-size: 13;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 12;
+  text-transform: uppercase;
+}
+
+.card-value {
+  font-size: 32;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 5;
+}
+
+.card-unit {
+  font-size: 13;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+.doctor-button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 18;
+  font-weight: bold;
+  height: 55;
+  margin: 10 15;
+  border-radius: 14;
+}
+
+.doctor-button:active {
+  background-color: #45a049;
+}
+
+.sos-button {
+  background-color: #f44336;
+  color: white;
+  font-size: 20;
+  font-weight: bold;
+  height: 60;
+  margin: 0 15 15 15;
+  border-radius: 14;
+}
+
+.sos-button:active {
+  background-color: #d32f2f;
 }

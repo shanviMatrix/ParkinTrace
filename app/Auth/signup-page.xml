@@ -1,0 +1,80 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Create Account">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="login-container">
+            
+            <StackLayout class="login-header">
+                <Label text="🏥" fontSize="50" horizontalAlignment="center" />
+                <Label text="Join ParkinTrace" class="form-title" style="color: white; margin-top: 10;" />
+            </StackLayout>
+
+            <StackLayout class="login-form">
+                
+                <StackLayout class="input-field">
+                    <Label text="Full Name" class="input-label" />
+                    <TextField 
+                        hint="Enter your full name" 
+                        text="{{ fullName }}" 
+                        class="input" />
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label text="Email" class="input-label" />
+                    <TextField 
+                        hint="Enter your email" 
+                        keyboardType="email" 
+                        text="{{ email }}" 
+                        class="input" 
+                        autocorrect="false" 
+                        autocapitalizationType="none" />
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label text="Phone Number" class="input-label" />
+                    <TextField 
+                        hint="Enter your phone" 
+                        keyboardType="phone" 
+                        text="{{ phone }}" 
+                        class="input" />
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label text="Password" class="input-label" />
+                    <TextField 
+                        hint="Create a password" 
+                        secure="true" 
+                        text="{{ password }}" 
+                        class="input" />
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label text="Confirm Password" class="input-label" />
+                    <TextField 
+                        hint="Re-enter password" 
+                        secure="true" 
+                        text="{{ confirmPassword }}" 
+                        class="input" />
+                </StackLayout>
+
+                <Button 
+                    text="Sign Up" 
+                    tap="onSignupTap" 
+                    class="btn-primary" 
+                    marginTop="20" />
+
+            </StackLayout>
+
+            <StackLayout class="signup-section">
+                <Label text="Already have an account?" class="signup-text" />
+                <Label 
+                    text="Login" 
+                    tap="goBack" 
+                    class="link-text-bold" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>
